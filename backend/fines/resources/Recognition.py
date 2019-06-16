@@ -12,7 +12,14 @@ class RecognitionResource(Resource):
 
     @staticmethod
     def post():
-        print(request.files)
-        file = request.files['file1'].save('test.png')
-        res = main.compute_cosine_distance('test.png')
-        return {'message': res}, 200
+        file = request.files['file'].save('test.png')
+        score = main.compute_cosine_distance('test.png')
+        if score > 0.7:
+            result = 'denied'
+        elif score < 0.5:
+            result = 'accepted'
+        else:
+            result = 'not sure'
+        print('Score =', score, '| Result = ', result)
+
+        return {'message': score, 'result': result}, 200

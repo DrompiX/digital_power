@@ -250,7 +250,6 @@ class APIClient {
         
         var request = URLRequest(url: urlEncoded1)
         request.httpMethod = HTTPMethod.get.rawValue
-        print(urlEncoded1)
         print(request)
         Alamofire.request(request).response { response in
             if (response.response?.statusCode == nil) {

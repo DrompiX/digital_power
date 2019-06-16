@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B08A0BF22B647B70086FD0B /* FineInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0BE22B647B70086FD0B /* FineInfoViewController.swift */; };
+		0B08A0C122B647C20086FD0B /* FineViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0C022B647C20086FD0B /* FineViewPresenter.swift */; };
+		0B08A0C322B647D20086FD0B /* FineInfoContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0C222B647D20086FD0B /* FineInfoContract.swift */; };
+		0B08A0C622B656740086FD0B /* SetFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0C522B656740086FD0B /* SetFaceViewController.swift */; };
+		0B08A0C822B6567E0086FD0B /* SetFacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0C722B6567E0086FD0B /* SetFacePresenter.swift */; };
+		0B08A0CA22B6568B0086FD0B /* SetFaceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0C922B6568B0086FD0B /* SetFaceContract.swift */; };
 		0BAF606522B5049700EDE824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF606422B5049700EDE824 /* AppDelegate.swift */; };
 		0BAF606A22B5049700EDE824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAF606822B5049700EDE824 /* Main.storyboard */; };
 		0BAF606C22B5049900EDE824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BAF606B22B5049900EDE824 /* Assets.xcassets */; };
@@ -59,6 +65,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B08A0BE22B647B70086FD0B /* FineInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FineInfoViewController.swift; sourceTree = "<group>"; };
+		0B08A0C022B647C20086FD0B /* FineViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FineViewPresenter.swift; sourceTree = "<group>"; };
+		0B08A0C222B647D20086FD0B /* FineInfoContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FineInfoContract.swift; sourceTree = "<group>"; };
+		0B08A0C522B656740086FD0B /* SetFaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFaceViewController.swift; sourceTree = "<group>"; };
+		0B08A0C722B6567E0086FD0B /* SetFacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFacePresenter.swift; sourceTree = "<group>"; };
+		0B08A0C922B6568B0086FD0B /* SetFaceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFaceContract.swift; sourceTree = "<group>"; };
 		0BAF606122B5049700EDE824 /* DigitalPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BAF606422B5049700EDE824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BAF606922B5049700EDE824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +139,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B08A0BD22B647A00086FD0B /* FineInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0B08A0BE22B647B70086FD0B /* FineInfoViewController.swift */,
+				0B08A0C022B647C20086FD0B /* FineViewPresenter.swift */,
+				0B08A0C222B647D20086FD0B /* FineInfoContract.swift */,
+			);
+			path = FineInfo;
+			sourceTree = "<group>";
+		};
+		0B08A0C422B6565F0086FD0B /* SetFace */ = {
+			isa = PBXGroup;
+			children = (
+				0B08A0C522B656740086FD0B /* SetFaceViewController.swift */,
+				0B08A0C722B6567E0086FD0B /* SetFacePresenter.swift */,
+				0B08A0C922B6568B0086FD0B /* SetFaceContract.swift */,
+			);
+			path = SetFace;
+			sourceTree = "<group>";
+		};
 		0BAF605822B5049700EDE824 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				0BAF607822B5069D00EDE824 /* Authorization.storyboard */,
+				0B08A0C422B6565F0086FD0B /* SetFace */,
 				0BAF60B122B5484200EDE824 /* ConfirmationPresenter.swift */,
 				0BAF60B322B5484E00EDE824 /* ConfirmationViewController.swift */,
 				0BAF60B522B5485C00EDE824 /* AuthorizationContract.swift */,
@@ -274,6 +307,7 @@
 		0BAF60C222B565B000EDE824 /* MainNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				0B08A0BD22B647A00086FD0B /* FineInfo */,
 				0BAF60D722B62B6E00EDE824 /* MainView */,
 				0BAF606822B5049700EDE824 /* Main.storyboard */,
 				0BAF60BB22B562A200EDE824 /* FinesList */,
@@ -463,13 +497,19 @@
 				0BAF609D22B532F800EDE824 /* AContract.swift in Sources */,
 				0BAF60A422B53C2A00EDE824 /* FeesContract.swift in Sources */,
 				0BAF608322B50D9200EDE824 /* Constants.swift in Sources */,
+				0B08A0CA22B6568B0086FD0B /* SetFaceContract.swift in Sources */,
 				0BAF60A022B53C1000EDE824 /* FeesVC.swift in Sources */,
 				0BAF60AF22B5467600EDE824 /* StartNavigationContract.swift in Sources */,
 				0BAF60A222B53C1900EDE824 /* FeesPresenter.swift in Sources */,
+				0B08A0C622B656740086FD0B /* SetFaceViewController.swift in Sources */,
 				0BAF60BD22B562C800EDE824 /* FinesListViewController.swift in Sources */,
 				0BAF60B822B5575800EDE824 /* AuthorizationPresenter.swift in Sources */,
 				0BAF60D622B62A9A00EDE824 /* DriverCollectionViewCell.swift in Sources */,
+				0B08A0BF22B647B70086FD0B /* FineInfoViewController.swift in Sources */,
+				0B08A0C322B647D20086FD0B /* FineInfoContract.swift in Sources */,
 				0BAF60C122B5630A00EDE824 /* FinesContract.swift in Sources */,
+				0B08A0C122B647C20086FD0B /* FineViewPresenter.swift in Sources */,
+				0B08A0C822B6567E0086FD0B /* SetFacePresenter.swift in Sources */,
 				0BAF609A22B532C500EDE824 /* APresenter.swift in Sources */,
 				0BAF60AD22B5465C00EDE824 /* StartNavigationViewController.swift in Sources */,
 				0BAF60CE22B619E900EDE824 /* OnBoardingPageContentViewController.swift in Sources */,

@@ -32,7 +32,6 @@ extension StartNavigationViewController: StartNavigationViewDelegate {
     
     func openOnBoarding() {
         let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
-        print(storyboard)
         let controller = storyboard.instantiateViewController(withIdentifier: "OnBoarding")
         self.present(controller, animated: true, completion: nil)
     }

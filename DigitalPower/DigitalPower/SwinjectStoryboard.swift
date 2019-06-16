@@ -85,7 +85,7 @@ extension SwinjectStoryboard {
         
         //Fines List MVP setup
         defaultContainer.register(FinesListPresenterDelegate.self) { _ in
-            FinesListPresenter(defaults: defaultContainer.resolve(UserDefaults.self)!, authorizationManager: defaultContainer.resolve(AuthDataManager.self)!, APIClient: defaultContainer.resolve(APIClient.self)!)
+            FinesListPresenter(defaults: defaultContainer.resolve(UserDefaults.self)!, authorizationManager: defaultContainer.resolve(AuthDataManager.self)!, APIClient: defaultContainer.resolve(APIClient.self)!, realm: defaultContainer.resolve(Realm.self)!)
         }
         
         defaultContainer.storyboardInitCompleted(FinesListViewController.self) { resolver, controller in
@@ -101,6 +101,28 @@ extension SwinjectStoryboard {
         
         defaultContainer.storyboardInitCompleted(MainViewController.self) { resolver, controller in
             var presenter = resolver.resolve(MainPresenterDelegate.self)
+            presenter?.view = controller
+            controller.presenter = presenter
+        }
+        
+        //Fine Info MVP setup
+        defaultContainer.register(FineInfoPresenterDelegate.self) { _ in
+            FineInfoPresenter(defaults: defaultContainer.resolve(UserDefaults.self)!, authorizationManager: defaultContainer.resolve(AuthDataManager.self)!, APIClient: defaultContainer.resolve(APIClient.self)!, realm: defaultContainer.resolve(Realm.self)!)
+        }
+        
+        defaultContainer.storyboardInitCompleted(FineInfoViewController.self) { resolver, controller in
+            var presenter = resolver.resolve(FineInfoPresenterDelegate.self)
+            presenter?.view = controller
+            controller.presenter = presenter
+        }
+        
+        //SetFace MVP setup
+        defaultContainer.register(SetFacePresenterDelegate.self) { _ in
+            SetFacePresenter(defaults: defaultContainer.resolve(UserDefaults.self)!, authorizationManager: defaultContainer.resolve(AuthDataManager.self)!, APIClient: defaultContainer.resolve(APIClient.self)!)
+        }
+        
+        defaultContainer.storyboardInitCompleted(SetFaceViewController.self) { resolver, controller in
+            var presenter = resolver.resolve(SetFacePresenterDelegate.self)
             presenter?.view = controller
             controller.presenter = presenter
         }

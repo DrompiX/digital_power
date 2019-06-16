@@ -15,15 +15,26 @@ class AutomobileVC: UIViewController {
     @IBOutlet weak var region: UITextField!
     @IBOutlet weak var signLabel: UITextField!
     @IBOutlet weak var documentLabel: UITextField!
-    @IBOutlet weak var autoName: UITextField!
     
     var presenter: APresenterDelegate!
     
     @IBAction func onSendButton(_ sender: Any) {
-        if let region = region.text, let sign = signLabel.text, let document = documentLabel.text, let name = autoName.text {
-            var parameters = ["region" : "77", "auto_number": "Р081РН", "registration_full" : "7710406576", "name": name ]
+//
+//        var parameters = ["region" : "77", "auto_number": "Р081РН", "registration_full" : "7710406576", "name": "" ]
+//        presenter.setCar(parameters: parameters)
+        
+        if let region = region.text, let sign = signLabel.text, let document = documentLabel.text {
+            var parameters = ["region" : region, "auto_number": sign, "registration_full" : document]
             presenter.setCar(parameters: parameters)
+        } else {
+            
         }
+    }
+    
+    func presentList() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "mainView")
+        self.present(controller, animated: true, completion: nil)
     }
 }
 

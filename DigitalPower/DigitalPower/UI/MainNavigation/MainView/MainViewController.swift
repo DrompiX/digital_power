@@ -26,6 +26,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         registerCell()
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        carsCollectionView.reloadData()
+    }
+    
     func registerCell() {
         carsCollectionView.register(UINib.init(nibName: "CarCellPrototype", bundle: nil), forCellWithReuseIdentifier: "CarCellPrototype")
         driversCollectionView.register(UINib.init(nibName: "DriverCellPrototype", bundle: nil), forCellWithReuseIdentifier: "DriverCellPrototype")
@@ -51,5 +56,28 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func reloadData() {
         carsCollectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == carsCollectionView {
+            if indexPath.row == presenter.getNumberOfCars() - 1 {
+                openAddingNewCarViewController()
+            } else {
+                openFinesViewController(indexPath: indexPath)
+            }
+        }
+    }
+    
+    func openFinesViewController(indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "FinesViewController") as! FinesListViewController
+        controller.presenter.setId(id: presenter.getCarIDForRow(indexPath: indexPath))
+        self.present(controller, animated: true)
+    }
+    
+    func openAddingNewCarViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "addNewCar")
+        self.present(controller, animated: true, completion: nil)
     }
 }

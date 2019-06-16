@@ -12,8 +12,6 @@ import UIKit
 class ConfirmationViewController: UIViewController {
     
     @IBAction func onConfirmClick(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "mainView")
-        self.present(controller, animated: true, completion: nil)
+        
     }
 }

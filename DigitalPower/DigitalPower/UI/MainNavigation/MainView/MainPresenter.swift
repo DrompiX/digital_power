@@ -32,7 +32,7 @@ class MainPresenter: MainPresenterDelegate {
     }
     
     func getNumberOfDrivers() -> Int {
-        return 2
+        return 1
     }
     
     func getNumberOfCars() -> Int {
@@ -46,8 +46,6 @@ class MainPresenter: MainPresenterDelegate {
     
     func onBindCarCell(cell: CarCollectionViewCell, indexPath: IndexPath) -> CarCollectionViewCell {
         if let cars = cars {
-            print(indexPath.row)
-            print(getNumberOfCars())
             if indexPath.row == getNumberOfCars() - 1 {
                 cell.setAsPlus()
             } else {
@@ -71,5 +69,10 @@ class MainPresenter: MainPresenterDelegate {
             cell.setBottomLabel(text: "Пётр")
         }
         return cell
+    }
+    
+    func getCarIDForRow(indexPath: IndexPath) -> String {
+        let objects = realm.objects(CarStorage.self)
+        return objects[indexPath.row].reqs_id
     }
 }

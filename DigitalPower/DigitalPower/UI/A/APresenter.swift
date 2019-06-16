@@ -23,6 +23,7 @@ class APresenter: APresenterDelegate {
             if let reqsId = reqsId {
                 self.APIClient.loadAutoInfo(id: reqsId) {
                     error in
+                    self.view.presentList()
                 }
             }
         }

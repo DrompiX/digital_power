@@ -33,4 +33,8 @@ class PersistantStorageManager {
             realm.add(driver)
         }
     }
+    
+    static func getCarForID(id: String, realm: Realm) -> CarStorage? {
+        return realm.object(ofType: CarStorage.self, forPrimaryKey: id)
+    }
 }

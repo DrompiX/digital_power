@@ -81,12 +81,12 @@ class OnBoardingPageViewController: UIPageViewController {
         for i in 0..<pageControl.subviews.count {
             let dot = pageControl.subviews[i]
             if i == pageControl.currentPage {
-                dot.backgroundColor = UIColor.init(red: 41, green: 111, blue: 208, alpha: 1)
+                dot.backgroundColor = UIColor.blue
             } else {
                 dot.backgroundColor = UIColor.white
             }
             dot.layer.cornerRadius = dot.frame.size.height / 2
-            dot.layer.borderColor = UIColor.init(red: 41, green: 111, blue: 208, alpha: 1).cgColor
+            dot.layer.borderColor = UIColor.black.cgColor
             dot.layer.borderWidth = 1
         }
     }

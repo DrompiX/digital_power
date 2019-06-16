@@ -20,4 +20,5 @@ protocol MainPresenterDelegate {
     func getNumberOfCars() -> Int
     func onBindCarCell(cell: CarCollectionViewCell, indexPath: IndexPath) -> CarCollectionViewCell
     func onBindDriverCell(cell: DriverCollectionViewCell, indexPath: IndexPath) -> DriverCollectionViewCell
+    func getCarIDForRow(indexPath: IndexPath) -> String
 }

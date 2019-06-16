@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FineTableViewCell" customModule="DigitalPower" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="558" height="207"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6p-iF-6Mh">
+                    <rect key="frame" x="10" y="64" width="538" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jd-K3-zg5">
+                    <rect key="frame" x="10" y="95" width="538" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9Jd-K3-zg5" secondAttribute="bottom" constant="20" id="5qe-WB-bQx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="R6p-iF-6Mh" secondAttribute="trailing" constant="10" id="AmQ-ei-CSu"/>
+                <constraint firstItem="R6p-iF-6Mh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="EV3-pV-2mH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Jd-K3-zg5" secondAttribute="trailing" constant="10" id="Le3-DB-2JZ"/>
+                <constraint firstItem="9Jd-K3-zg5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="PCD-ZZ-LMX"/>
+                <constraint firstItem="9Jd-K3-zg5" firstAttribute="top" secondItem="R6p-iF-6Mh" secondAttribute="bottom" constant="10" id="R44-Fx-DbM"/>
+                <constraint firstItem="R6p-iF-6Mh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="ro1-u3-YE7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="9Jd-K3-zg5" id="Ggw-MA-M98"/>
+                <outlet property="titleLabel" destination="R6p-iF-6Mh" id="8bQ-y0-K1f"/>
+            </connections>
+            <point key="canvasLocation" x="184.05797101449278" y="-172.43303571428569"/>
+        </view>
+    </objects>
+</document>

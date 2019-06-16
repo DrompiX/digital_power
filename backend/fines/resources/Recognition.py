@@ -1,6 +1,8 @@
 from flask import request, send_file
 from flask_restful import Resource
 
+# from detection import main
+
 
 class RecognitionResource(Resource):
 
@@ -11,5 +13,9 @@ class RecognitionResource(Resource):
     @staticmethod
     def post():
         print(request.files)
-        file = request.files['file1'].read()
-        return {'message': 'file received'}, 200
+        file = request.files['file1'].save('test.png')
+        # res = main.compute_cosine_distance('test.png')
+        # print(res)
+        # TODO: feed files into model
+
+        return {'message': 'success'}, 200

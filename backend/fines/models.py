@@ -1,5 +1,4 @@
-from flask import Flask
-from marshmallow import Schema, fields, pre_load, validate
+from marshmallow import fields
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
@@ -16,13 +15,15 @@ class User(db.Model):
     phone = db.Column(db.String, nullable=True)
     active = db.Column(db.Boolean)
     service = db.Column(db.String)  # NULL, email, sms
+    car_id = db.Column(db.String)
 
-    def __init__(self, access_token: str, service: str,
-                 email: str = None, phone: str = None):
+    def __init__(self, access_token: str, service: str, car_id: str,
+                 email: str = None, phone: str = None,):
         self.access_token = access_token
         self.email = email
         self.phone = phone
         self.service = service
+        self.car_id = car_id
         self.active = True
 
 
@@ -32,7 +33,5 @@ class UserSchema(ma.Schema):
     email = fields.String(required=True, allow_none=True)
     phone = fields.String(required=True, allow_none=True)
     service = fields.String(required=True)
+    car_id = fields.String(required=True)
     active = fields.Boolean(required=False)
-
-
-

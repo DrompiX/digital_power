@@ -7,3 +7,4 @@ api = Api(api_bp)
 
 # Routes
 api.add_resource(resources.UserResource, '/user')
+api.add_resource(resources.RecognitionResource, '/recognize')

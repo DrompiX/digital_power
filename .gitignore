@@ -1,3 +1,5 @@
+*.jpg
+*.png
 backend/detection/model.pb
 .vscode/
 .idea/

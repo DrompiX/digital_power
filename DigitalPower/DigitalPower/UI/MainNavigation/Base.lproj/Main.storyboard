@@ -455,13 +455,13 @@
                                     <constraint firstAttribute="height" constant="50" id="Uvx-go-88g"/>
                                     <constraint firstAttribute="width" constant="150" id="cX6-Dy-ugP"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="applePay"/>
+                                <state key="normal" image="applePay"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWm-g6-H6J">
                                 <rect key="frame" x="15" y="40" width="33" height="31"/>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backButton:" destination="S18-fb-Wv0" eventType="touchUpInside" id="OgZ-Zv-psZ"/>
+                                    <segue destination="XEz-BB-pzf" kind="show" id="kbC-QQ-PGw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -519,4 +519,7 @@
         <image name="map" width="294" height="153"/>
         <image name="sms" width="17" height="17"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kbC-QQ-PGw"/>
+    </inferredMetricsTieBreakers>
 </document>

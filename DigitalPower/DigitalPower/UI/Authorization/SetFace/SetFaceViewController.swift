@@ -18,8 +18,8 @@ class SetFaceViewController: UIViewController, SetFaceViewDelegate, UIImagePicke
     var input: AVCaptureDeviceInput?
     
     func openNextScreen() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "mainView")
+        let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "success")
         self.present(controller, animated: true, completion: nil)
     }
     
@@ -55,7 +55,7 @@ class SetFaceViewController: UIViewController, SetFaceViewDelegate, UIImagePicke
 //
         let parameters = ["Content-Type": "multipart/form-data"] //Optional for extra parameter
         
-        let urlRequest = URL.init(string: "10.116.118.67:5000/api/user")
+        let urlRequest = URL.init(string: "http//10.116.118.67:5000/api/user")
         
 //
 //        Alamofire.upload(imgData, to: "10.116.118.67:5000/api/user", method: .get, headers: parameters).response {
@@ -64,7 +64,7 @@ class SetFaceViewController: UIViewController, SetFaceViewDelegate, UIImagePicke
 //        }
 //
 //
-//        Alamofire.request(urlRequest!, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {
+//        Alamofire.request(urlRequest!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON {
 //            response in
 //            print(response)
 //        }

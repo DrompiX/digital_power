@@ -13,6 +13,7 @@
 		0B08A0C622B656740086FD0B /* SetFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0C522B656740086FD0B /* SetFaceViewController.swift */; };
 		0B08A0C822B6567E0086FD0B /* SetFacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0C722B6567E0086FD0B /* SetFacePresenter.swift */; };
 		0B08A0CA22B6568B0086FD0B /* SetFaceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0C922B6568B0086FD0B /* SetFaceContract.swift */; };
+		0B08A0CE22B66E690086FD0B /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08A0CD22B66E690086FD0B /* SuccessVC.swift */; };
 		0BAF606522B5049700EDE824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF606422B5049700EDE824 /* AppDelegate.swift */; };
 		0BAF606A22B5049700EDE824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAF606822B5049700EDE824 /* Main.storyboard */; };
 		0BAF606C22B5049900EDE824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BAF606B22B5049900EDE824 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		0B08A0C522B656740086FD0B /* SetFaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFaceViewController.swift; sourceTree = "<group>"; };
 		0B08A0C722B6567E0086FD0B /* SetFacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFacePresenter.swift; sourceTree = "<group>"; };
 		0B08A0C922B6568B0086FD0B /* SetFaceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFaceContract.swift; sourceTree = "<group>"; };
+		0B08A0CD22B66E690086FD0B /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 		0BAF606122B5049700EDE824 /* DigitalPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BAF606422B5049700EDE824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BAF606922B5049700EDE824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +159,13 @@
 				0B08A0C922B6568B0086FD0B /* SetFaceContract.swift */,
 			);
 			path = SetFace;
+			sourceTree = "<group>";
+		};
+		0B08A0CC22B66E5E0086FD0B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		0BAF605822B5049700EDE824 = {
@@ -281,6 +290,8 @@
 		0BAF60B022B5482000EDE824 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				0B08A0CD22B66E690086FD0B /* SuccessVC.swift */,
+				0B08A0CC22B66E5E0086FD0B /* New Group */,
 				0BAF607822B5069D00EDE824 /* Authorization.storyboard */,
 				0B08A0C422B6565F0086FD0B /* SetFace */,
 				0BAF60B122B5484200EDE824 /* ConfirmationPresenter.swift */,
@@ -495,6 +506,7 @@
 				0BAF60AB22B5463F00EDE824 /* StartNavigationPresenter.swift in Sources */,
 				0BAF60BF22B562F700EDE824 /* FinesListPresenter.swift in Sources */,
 				0BAF609D22B532F800EDE824 /* AContract.swift in Sources */,
+				0B08A0CE22B66E690086FD0B /* SuccessVC.swift in Sources */,
 				0BAF60A422B53C2A00EDE824 /* FeesContract.swift in Sources */,
 				0BAF608322B50D9200EDE824 /* Constants.swift in Sources */,
 				0B08A0CA22B6568B0086FD0B /* SetFaceContract.swift in Sources */,

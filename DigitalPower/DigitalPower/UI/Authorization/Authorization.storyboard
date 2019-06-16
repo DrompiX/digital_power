@@ -58,7 +58,7 @@
                                 <rect key="frame" x="30" y="499" width="354" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2HJ-WF-Czq">
                                 <rect key="frame" x="107" y="217" width="200" height="200"/>
@@ -281,6 +281,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAq-aJ-63L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1740" y="115"/>
+        </scene>
+        <!--SuccessVC-->
+        <scene sceneID="Pbg-dd-m4t">
+            <objects>
+                <viewController storyboardIdentifier="success" id="dnq-v4-EIh" customClass="SuccessVC" customModule="DigitalPower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yhu-1F-GKG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-IZ-WRq">
+                                <rect key="frame" x="0.0" y="827" width="414" height="69"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Личность подтверждена" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-88-uV7">
+                                <rect key="frame" x="54.5" y="392.5" width="305.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.4039215686" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Won-L5-k8T">
+                                <rect key="frame" x="67" y="513.5" width="280" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="XVf-Qa-I5R"/>
+                                    <constraint firstAttribute="height" constant="60" id="lz5-sN-GKe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" image="enter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openNext:" destination="dnq-v4-EIh" eventType="touchUpInside" id="pR0-9e-iYT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ДАЛЬШЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exN-bN-4vx" userLabel="ВОЙТИ ЧЕРЕЗ">
+                                <rect key="frame" x="171.5" y="533" width="71.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FqS-IZ-WRq" firstAttribute="leading" secondItem="dOr-AI-uYK" secondAttribute="leading" id="59e-2z-qSy"/>
+                            <constraint firstItem="exN-bN-4vx" firstAttribute="centerY" secondItem="Won-L5-k8T" secondAttribute="centerY" id="95U-xA-Gz9"/>
+                            <constraint firstAttribute="bottom" secondItem="FqS-IZ-WRq" secondAttribute="bottom" id="JV9-fz-IVl"/>
+                            <constraint firstItem="Won-L5-k8T" firstAttribute="centerY" secondItem="dOr-AI-uYK" secondAttribute="centerY" multiplier="1.2" id="L84-IO-rhK"/>
+                            <constraint firstItem="EKX-88-uV7" firstAttribute="centerY" secondItem="dOr-AI-uYK" secondAttribute="centerY" multiplier="0.9" id="Pyg-c5-H9b"/>
+                            <constraint firstItem="Won-L5-k8T" firstAttribute="centerX" secondItem="dOr-AI-uYK" secondAttribute="centerX" id="Qas-Zy-nlh"/>
+                            <constraint firstItem="FqS-IZ-WRq" firstAttribute="trailing" secondItem="dOr-AI-uYK" secondAttribute="trailing" id="SdO-uX-ZSb"/>
+                            <constraint firstItem="EKX-88-uV7" firstAttribute="centerX" secondItem="dOr-AI-uYK" secondAttribute="centerX" id="aYg-yd-xZa"/>
+                            <constraint firstItem="exN-bN-4vx" firstAttribute="centerX" secondItem="Won-L5-k8T" secondAttribute="centerX" id="yN4-3c-V2J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dOr-AI-uYK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fo1-WM-NjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2582" y="119"/>
         </scene>
     </scenes>
     <resources>
